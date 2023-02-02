@@ -1,20 +1,26 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import * as path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
+  root: './src',
   build: {
-    chunkSizeWarningLimit: 2000
+    chunkSizeWarningLimit: 2000,
+    rollupOptions: {
+      input: {
+        app: './src/index.html'
+      }
+    },
+    outDir: '../'
   },
   plugins: [react()],
   resolve: {
     alias: [
-      { find: '@', replacement: path.resolve(__dirname, 'src') },
-      { find: '@a', replacement: path.resolve(__dirname, 'src/apis') },
-      { find: '@v', replacement: path.resolve(__dirname,'src/views') },
-      { find: '@c', replacement: path.resolve(__dirname,'src/components') }
+      { find: '@', replacement: './' },
+      { find: '@a', replacement: '/apis' },
+      { find: '@v', replacement: '/views' },
+      { find: '@c', replacement: '/components' }
     ]
   },
 })
