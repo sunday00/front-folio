@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import * as path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,10 +11,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: [
-      { find: '@', replacement: 'src' },
-      { find: '@a', replacement: 'src/apis' },
-      { find: '@v', replacement: 'src/views' },
-      { find: '@c', replacement: 'src/components' }
-    ],
+      { find: '@', replacement: path.resolve(__dirname, 'src') },
+      { find: '@a', replacement: path.resolve(__dirname, 'src/apis') },
+      { find: '@v', replacement: path.resolve(__dirname,'src/views') },
+      { find: '@c', replacement: path.resolve(__dirname,'src/components') }
+    ]
   },
 })
