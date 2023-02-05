@@ -8,10 +8,12 @@ import {RecoilDevTools} from "recoil-toolkit";
 
 const router = createBrowserRouter([
   {
-    path: '/front-folio/*',
+    path: '/*',
     element: <App />,
   }
-])
+], {
+  basename: '/front-folio',
+})
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <RecoilRoot>

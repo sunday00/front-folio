@@ -16,12 +16,11 @@ function App() {
   }, [])
 
   return (
-    <div className="App" data-theme="dracula">
+    <div className="App" data-theme="pastel">
       <Nav/>
       <div>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
-          <Route path="/home" element={<Home/>}></Route>
         </Routes>
       </div>
     </div>
