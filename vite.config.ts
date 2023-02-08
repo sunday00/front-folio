@@ -20,7 +20,8 @@ export default defineConfig({
       { find: '@', replacement: '/' },
       { find: '@a', replacement: '/apis' },
       { find: '@v', replacement: '/views' },
-      { find: '@c', replacement: '/components' }
+      { find: '@c', replacement: '/components' },
+      { find: '@s', replacement: '/store' }
     ]
   },
 })

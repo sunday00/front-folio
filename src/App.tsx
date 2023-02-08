@@ -3,7 +3,7 @@ import {useSetRecoilState} from 'recoil'
 import Home from '@v/Home'
 import Nav from "@c/Nav"
 import {useEffect} from "react"
-import {GIT_AUTH} from "@/store/common.store";
+import {GIT_AUTH} from "@s/common.store";
 import Vanilla from "@v/three/Vanilla";
 
 function App() {

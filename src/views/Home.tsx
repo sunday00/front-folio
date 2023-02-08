@@ -1,5 +1,5 @@
 import {useRecoilValue} from "recoil";
-import {RepoCode, projectsState} from "@/store/main.store";
+import {RepoCode, projectsState} from "@s/main.store";
 import Section from "@c/HomeServices/Section";
 
 const Home = () => {
