@@ -17,7 +17,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: [
-      { find: '@', replacement: './' },
+      { find: '@', replacement: '/' },
       { find: '@a', replacement: '/apis' },
       { find: '@v', replacement: '/views' },
       { find: '@c', replacement: '/components' }
