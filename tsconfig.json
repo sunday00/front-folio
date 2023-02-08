@@ -5,7 +5,7 @@
       "@a/*": ["./src/apis/*"],
       "@v/*": ["./src/views/*"],
       "@c/*": ["./src/components/*"],
-      "@s/*": ["./src/store/*.*"]
+      "@s/*": ["./src/store/*"]
     },
     "types": ["module", "vite/client", "three"],
     "target": "ESNext",
