@@ -1,14 +1,44 @@
-import {selectorFamily} from "recoil";
+import {atomFamily} from "recoil";
 
-export const threeProjectsStates = selectorFamily({
-  key: 'threeProjects',
-  get: () => async () => {
-    const res = await fetch(import.meta.env.VITE_GIT_THREE_REPO)
+export enum RepoCode {
+  THREE = 'three',
+}
 
-    if(res.status === 404) throw Error('projects not found')
+type projectsStateArgs = {
+  repoCode: string,
+  page?: number|null,
+  path?: string|null,
+}
 
-    return res.json()
+class Api {
+  cachedItems: any[] = []
+
+  async getProjects(url: string) {
+    if(this.cachedItems.length === 0) {
+      const res = await fetch(url)
+
+      if(res.status === 404) throw Error('projects not found')
+
+      this.cachedItems = await res.json()
+    }
+
+    return this.cachedItems
   }
+}
+
+const api = new Api()
+
+export const projectsState = atomFamily<string[], projectsStateArgs>({
+  key: 'projectsState',
+  default: [],
+  effects: ({repoCode, page, path}) => [
+    ({setSelf}) => {
+      let url = `${import.meta.env[`VITE_GIT_REPO`]}`
+
+      if(page) url = `${url}/src/${repoCode}/${page}`
+      if(path) url = `${url}/${path}`
+
+      api.getProjects(url).then(r => setSelf(r))
+    },
+  ],
 })
-
-

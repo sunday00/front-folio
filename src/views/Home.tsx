@@ -1,14 +1,15 @@
 import {useRecoilValue} from "recoil";
-import {threeProjectsStates} from "@/store/main.store";
+import {RepoCode, projectsState} from "@/store/main.store";
+import Section from "@c/HomeServices/Section";
 
 const Home = () => {
-  const threeProjects = useRecoilValue(threeProjectsStates())
+  const threeProjects = useRecoilValue(projectsState(
+    {repoCode: RepoCode.THREE, page: 1}
+  ))
 
   return (
-    <div className="home-wrap">
-      <section className="hero min-h-screen">
-
-      </section>
+    <div className="home-wrap flex flex-col w-full border-opacity-50">
+      <Section title="Three" contents={threeProjects}></Section>
     </div>
   );
 }
