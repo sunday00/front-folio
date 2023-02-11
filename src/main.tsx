@@ -6,6 +6,8 @@ import './index.scss'
 import {RecoilRoot} from "recoil";
 import {RecoilDevTools} from "recoil-toolkit";
 
+console.log(import.meta.env.NODE_ENV)
+
 const router = createHashRouter([{
     path: '/*',
     element: <App />,
