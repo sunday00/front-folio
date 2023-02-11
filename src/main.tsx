@@ -6,6 +6,8 @@ import './index.scss'
 import {RecoilRoot} from "recoil";
 import {RecoilDevTools} from "recoil-toolkit";
 
+window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function() {}
+
 const router = createHashRouter([{
     path: '/*',
     element: <App />,
