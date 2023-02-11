@@ -1,9 +1,13 @@
 // import { NavLink } from 'react-router-dom';
 
+import {NavLink} from "react-router-dom";
+
 export default () => {
   return (<div className="navbar bg-base-100">
     <div className="flex-1">
-      <a className="btn btn-ghost normal-case text-xl">Front-folio</a>
+      <NavLink to="/" className="btn btn-ghost normal-case text-xl">
+        Front-folio
+      </NavLink>
     </div>
     <nav className="flex-none gap-2">
       {/*<NavLink className={ a => `btn btn-info btn-xs active-${a.isActive}` } to='/'>home</NavLink>*/}

@@ -5,6 +5,7 @@ import Nav from "@c/Nav"
 import {useEffect} from "react"
 import {GIT_AUTH} from "@s/common_store";
 import Vanilla from "@v/three/Vanilla";
+import Webpack from "@v/three/Webpack";
 
 function App() {
   const setGIT_AUTH = useSetRecoilState(GIT_AUTH)
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/item/three/:page/:date/:no/vanilla/:name" element={<Vanilla />}></Route>
+          <Route path="/item/three/:page/:date/:no/webpack/:name" element={<Webpack />}></Route>
         </Routes>
       </div>
     </div>
