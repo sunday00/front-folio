@@ -11,8 +11,7 @@ export default () => {
     <h2 className="text-2xl text-center my-8">{name}</h2>
     <section className="flex flex-col items-center">
       <div className="w-full px-8 justify-center">
-        <iframe src={src} className="w-full h-[75vh]"
-                allow="interest-cohort '*'" />
+        <iframe src={src} className="w-full h-[75vh]"/>
       </div>
       <article className="w-full p-8 text-left">
         <p>build: webpack</p>
