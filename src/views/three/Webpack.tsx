@@ -12,7 +12,7 @@ export default () => {
     <section className="flex flex-col items-center">
       <div className="w-full px-8 justify-center">
         <iframe src={src} className="w-full h-[75vh]"
-                allow="interest-cohort 'https://sunday00.github.io'" />
+                allow="interest-cohort '*'" />
       </div>
       <article className="w-full p-8 text-left">
         <p>build: webpack</p>

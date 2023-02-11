@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div className="home-wrap flex flex-col w-full border-opacity-50">
-      <Section title="Three" contents={threeProjects}></Section>
+      {/*<Section title="Three" contents={threeProjects}></Section>*/}
     </div>
   );
 }
