@@ -16,6 +16,7 @@ export default () => {
       <article className="w-full p-8 text-left">
         <p>build: {build}</p>
         <p>date: {date}</p>
+        <p>visit full index: <a href={src} target="_blank">{src}</a></p>
       </article>
     </section>
   </div>)
