@@ -1,11 +1,11 @@
 import {useParams} from "react-router-dom";
 
 export default () => {
-  const {page, date, no, name} = useParams()
+  const {page, date, no, build, name} = useParams()
 
   const base = import.meta.env.VITE_GIT_PROD
 
-  const src = `${base}/src/three/${page}/${date}_${no}_webpack_${name}/dist`
+  const src = `${base}/src/three/${page}/${date}_${no}_${build}_${name}/dist`
 
   return (<div>
     <h2 className="text-2xl text-center my-8">{name}</h2>
@@ -14,7 +14,7 @@ export default () => {
         <iframe src={src} className="w-full h-[75vh]"/>
       </div>
       <article className="w-full p-8 text-left">
-        <p>build: webpack</p>
+        <p>build: {build}</p>
         <p>date: {date}</p>
       </article>
     </section>
