@@ -22,7 +22,8 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
-          <Route path="/item/three/:page/:date/:no/:build/:name" element={<Item />}></Route>
+          <Route path="/item/:type/:page/:date/:no/:build/:name" element={<Item />}></Route>
+          <Route path="/item/:type/:page/:date/:no/:build/:name" element={<Item />}></Route>
         </Routes>
       </div>
     </div>

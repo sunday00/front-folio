@@ -7,9 +7,14 @@ const Home = () => {
     {repoCode: RepoCode.THREE, page: 1}
   ))
 
+  const basicProjects = useRecoilValue(projectsState(
+    {repoCode: RepoCode.BASIC, page: 1}
+  ))
+
   return (
     <div className="home-wrap flex flex-col w-full border-opacity-50">
       <Section title="Three" contents={threeProjects}></Section>
+      <Section title="Basic Html, Css" contents={basicProjects}></Section>
     </div>
   );
 }

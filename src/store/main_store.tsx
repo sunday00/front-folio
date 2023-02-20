@@ -2,6 +2,7 @@ import {atomFamily} from "recoil";
 
 export enum RepoCode {
   THREE = 'three',
+  BASIC = 'basic',
 }
 
 type projectsStateArgs = {
